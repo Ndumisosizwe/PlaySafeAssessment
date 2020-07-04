@@ -1,4 +1,22 @@
 # PlaySafeAssessment
+
+# Application RESTful endpoints and examples on how to use them
+
+I decided to use http Request params as opposed to RequestBody or http headers. The method type for all endpoints is `GET`
+
+- http://{host}:{port}/conversions/ktoc?amountInKelvin=4
+  returns `-269.15` Celsius
+
+- http://{host}:{port}/conversions/ctok?amountInCelsius=40
+  returns `313.15` Kelvin
+  
+ - http://{host}:{port}/conversions/mtok?amountInMiles=7
+   returns `11.265408` Kilometers
+   
+ - http://{host}:{port}/conversions/ktom?amountInKilometers=14
+   returns `8.699196691322674` Miles
+
+
 # Java Developer Expertise Test (60 min) 
 
 # Part 1 
