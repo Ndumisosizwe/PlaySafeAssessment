@@ -1,6 +1,7 @@
 package com.playsafeholding.assessment.part1.web.rest;
 
 import com.playsafeholding.assessment.part1.service.ConversionService;
+import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -23,22 +24,22 @@ public class ConversionController {
 
 
     @GetMapping(value = "/ktoc")
-    public ResponseEntity<Double> convertKelvinTocToCelsius(@RequestParam Double amountInKelvin) {
-        return new ResponseEntity<>(conversionService.convertKelvinToCelsius(amountInKelvin), HttpStatus.OK);
+    public ResponseEntity<Double> convertKelvinTocToCelsius(@RequestParam @NonNull Double kelvin) {
+        return new ResponseEntity<>(conversionService.convertKelvinToCelsius(kelvin), HttpStatus.OK);
     }
 
     @GetMapping(value = "/ctok")
-    public ResponseEntity<Double> convertCelsiusToKelvin(@RequestParam Double amountInCelsius) {
-        return new ResponseEntity<>(conversionService.convertCelsiusToKelvin(amountInCelsius), HttpStatus.OK);
+    public ResponseEntity<Double> convertCelsiusToKelvin(@RequestParam @NonNull Double celsius) {
+        return new ResponseEntity<>(conversionService.convertCelsiusToKelvin(celsius), HttpStatus.OK);
     }
 
     @GetMapping(value = "/mtok")
-    public ResponseEntity<Double> convertMilesToKilometer(@RequestParam Double amountInMiles) {
-        return new ResponseEntity<>(conversionService.convertMilesToKilometers(amountInMiles), HttpStatus.OK);
+    public ResponseEntity<Double> convertMilesToKilometer(@RequestParam @NonNull Double miles) {
+        return new ResponseEntity<>(conversionService.convertMilesToKilometers(miles), HttpStatus.OK);
     }
 
     @GetMapping(value = "/ktom")
-    public ResponseEntity<Double> convertKilometerToMiles(@RequestParam Double amountInKilometers) {
-        return new ResponseEntity<>(conversionService.convertKilometersToMiles(amountInKilometers), HttpStatus.OK);
+    public ResponseEntity<Double> convertKilometerToMiles(@RequestParam @NonNull Double kilometers) {
+        return new ResponseEntity<>(conversionService.convertKilometersToMiles(kilometers), HttpStatus.OK);
     }
 }

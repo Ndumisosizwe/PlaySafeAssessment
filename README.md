@@ -1,20 +1,29 @@
 # PlaySafeAssessment
 
-# Application RESTful endpoints and examples on how to use them
+# Application RESTful endpoints and examples on how to use them (Part 1)
 
-I decided to use http Request params as opposed to RequestBody or http headers. The method type for all endpoints is `GET`
+I decided to use http Request params as opposed to RequestBody or http headers. The method type / http verb for all endpoints is: `GET`
 
-- http://{host}:{port}/conversions/ktoc?amountInKelvin=4
+http://${host}:${port}/${application-context}/${endpoint}
+
+This application will listen port `8081`
+
+- http://localhost:8081/conversions/ktoc?kelvin=4
   returns `-269.15` Celsius
 
-- http://{host}:{port}/conversions/ctok?amountInCelsius=40
+- http://localhost:8081/conversions/ctok?celsius=40
   returns `313.15` Kelvin
   
- - http://{host}:{port}/conversions/mtok?amountInMiles=7
+ - http://localhost:8081/conversions/mtok?miles=7
    returns `11.265408` Kilometers
    
- - http://{host}:{port}/conversions/ktom?amountInKilometers=14
+ - http://localhost:8081/conversions/ktom?kilometers=14
    returns `8.699196691322674` Miles
+   
+
+# Unit Tests
+
+Run in project directory, the command ``mvn test``
 
 
 # Java Developer Expertise Test (60 min) 
