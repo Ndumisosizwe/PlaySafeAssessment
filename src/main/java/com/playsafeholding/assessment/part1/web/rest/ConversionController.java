@@ -2,7 +2,6 @@ package com.playsafeholding.assessment.part1.web.rest;
 
 import com.playsafeholding.assessment.part1.service.ConversionService;
 import lombok.NonNull;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/conversions", produces = MediaType.APPLICATION_JSON_VALUE)
-@Slf4j
 public class ConversionController {
 
     public final ConversionService conversionService;
